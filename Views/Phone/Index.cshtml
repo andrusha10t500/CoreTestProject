@@ -1,0 +1,35 @@
+@using MvcMovie.Models
+@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Phone Page";
+}
+
+<form class="form-inline">
+    Выберете компанию:
+    <select name="companyId" id="form-control">
+        @foreach(CompanyModel comp in Model.Companies) {
+            <option value="@comp.Id">@comp.Name</option>
+        }
+    </select>
+    <input type="submit">
+</form>
+<br>
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>Имя</th>
+            <th>Производитель</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+    @foreach(Phone p in Model.Phones) {
+        <tr>
+            <td>@p.Name</td> 
+            <td>@p.Manufacturer?.Name</td> 
+            <td>@p.Price</td>   
+        </tr>
+    }
+</table>  
+
+
