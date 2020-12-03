@@ -6,7 +6,7 @@ using MvcMovie.Models;
 // using MvcMovie.ViewModels;
 
 namespace MvcMovie.Controllers {
-    [Route("[controller]")]
+    [Route("")]
     public class PhoneController : Controller {
         List<Phone> phones;
         List<Company> Companies;
