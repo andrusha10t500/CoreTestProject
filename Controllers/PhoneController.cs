@@ -69,7 +69,7 @@ namespace MvcMovie.Controllers {
                 }                
             };           
         }
-        [HttpGet("hui")]
+        [HttpGet("")]
         public IActionResult Index(int? companyId){
 
             List<CompanyModel> compModels = Companies
