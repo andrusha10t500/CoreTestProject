@@ -28,7 +28,7 @@ namespace MvcMovie.Controllers {
                 Country = "—ÿ¿"
             };
 
-            Companies = new List<Company>{ apple, microsoft, google};
+            Companies = new List<Company>{ apple, microsoft, google };
 
             phones = new List<Phone> {
                 new Phone { 
