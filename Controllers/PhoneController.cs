@@ -15,17 +15,17 @@ namespace MvcMovie.Controllers {
             Company apple = new Company {
                 Id = 1,
                 Name = "Apple",
-                Country = "—ÿ¿"
+                Country = "–°–®–ê"
             };
             Company microsoft = new Company {
                 Id = 2,
                 Name = "Samsung",
-                Country = "–ÂÒÔÛ·ÎËÍ‡  ÓÂˇ"
+                Country = "–†–µ—Å–ø—É–±–ª–∏–∫–∞ –ö–æ—Ä–µ—è"
             };
             Company google = new Company {
                 Id = 3,
                 Name = "Google",
-                Country = "—ÿ¿"
+                Country = "–°–®–ê"
             };
 
             Companies = new List<Company>{ apple, microsoft, google};
@@ -76,7 +76,7 @@ namespace MvcMovie.Controllers {
                 .Select(c => new CompanyModel {Id = c.Id, Name = c.Name})
                 .ToList();
 
-            compModels.Insert(0, new CompanyModel{ Id = 0, Name = "¬ÒÂ"});
+            compModels.Insert(0, new CompanyModel{ Id = 0, Name = "–í—Å–µ"});
 
             IndexViewModel ivm = new IndexViewModel { Companies = compModels, Phones = phones };
 
