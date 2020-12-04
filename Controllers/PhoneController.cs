@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using MvcMovie.Models;
+using Oracle.ManagedDataAccess.Client;
 // using MvcMovie.ViewModels;
 
 namespace MvcMovie.Controllers {
-    [Route("[controller]")]
+    [Route("{controller}")]
     public class PhoneController : Controller {
         List<Phone> phones;
         List<Company> Companies;
+        QueryDataExample db;
 
         public PhoneController() {
             Company apple = new Company {
@@ -28,7 +30,7 @@ namespace MvcMovie.Controllers {
                 Country = "США"
             };
 
-            Companies = new List<Company>{ apple, microsoft, google};
+            Companies = new List<Company>{ apple, microsoft, google };
 
             phones = new List<Phone> {
                 new Phone { 
@@ -69,7 +71,7 @@ namespace MvcMovie.Controllers {
                 }                
             };           
         }
-        [HttpGet("")]
+        [HttpGet("{action}")]
         public IActionResult Index(int? companyId){
 
             List<CompanyModel> compModels = Companies
