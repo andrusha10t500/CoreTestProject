@@ -15,17 +15,17 @@ namespace MvcMovie.Controllers {
             Company apple = new Company {
                 Id = 1,
                 Name = "Apple",
-                Country = "???"
+                Country = "США"
             };
             Company microsoft = new Company {
                 Id = 2,
                 Name = "Samsung",
-                Country = "?????????? ?????"
+                Country = "Республика Корея"
             };
             Company google = new Company {
                 Id = 3,
                 Name = "Google",
-                Country = "???"
+                Country = "США"
             };
 
             Companies = new List<Company>{ apple, microsoft, google };
