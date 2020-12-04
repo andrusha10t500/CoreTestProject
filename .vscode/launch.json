@@ -1,42 +1,25 @@
 {     
     "configurations": [       
         {
-            "name": ".NET Core Launch (web)",
-            "type": "coreclr",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
+            "name": "Launch Extension",
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"
+            ],
+            "preLaunchTask": "npm",
             "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/<target-framework>/<project-name.dll>",
-            "args": [],
-            "cwd": "${workspaceFolder}",            
-            "internalConsoleOptions": "openOnSessionStart",
-            "stopAtEntry": false,
-            "launchBrowser": {
-                "enabled": false
-            },
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
-            "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
-            }
+            "type": "pwa-extensionHost"
         },
         {
-            "type": "chrome",
+            "name": "Launch Chrome",
             "request": "launch",
-            "name": "Chrome",
-            "url": "http://localhost:5000",
-            "webRoot": "${workspaceRoot}/wwwroot"
-        }                      
-    ],
-    "compounds": [
-        {
-            "name": "Full stack",
-            "configurations": [".NET Core Launch (full)", "Chrome"]
+            "type": "pwa-chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/MvcMovie"
         }
+                           
     ]
 
 }

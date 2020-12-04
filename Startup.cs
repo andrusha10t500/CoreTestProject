@@ -10,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Routing;
 using System.Diagnostics;
 using MvcMovie.Models;
-using Microsoft.EntityFrameworkCore;
+// using Microsoft.EntityFrameworkCore;
  
 namespace MvcMovie
 {
@@ -20,8 +20,8 @@ namespace MvcMovie
         {
             // services.AddControllers();
             services.AddControllersWithViews();
-            string connection = Configuration.GetConnectionString("ORACLE");
-            services.AddDbContext<MobileContext>(options => options.UseSqlServer(connection));            
+            // string connection = Configuration.GetConnectionString("ORACLE");
+            // services.AddDbContext<MobileContext>(options => options.UseSqlServer(connection));            
         }
          
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -31,7 +31,7 @@ namespace MvcMovie
                 app.UseDeveloperExceptionPage();
             }
  
-            app.UseStaticFiles();
+            // app.UseStaticFiles();
 
             app.UseRouting();
  

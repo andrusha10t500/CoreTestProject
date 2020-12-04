@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Dtbo3EaBx5TZMC638SiEtZKKsS1BCtqw2qMbLrqMGoDUFGsaX3SLDfoPAV/qWpUojUgadTwj0QqNoPI3w4jRQQ==",
+  "dgSpecHash": "vLsZd45I2g2seof3t64GPqODp4uHZ8rk4NpH8i6p2zG4sWpt+ellP/7SgO8pP7Vl2RmSFPKMdH2XXGB0JviMjw==",
   "success": true,
-  "projectFilePath": "D:\\myProjectCore\\MvcMovie\\MvcMovie.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Core\\MvcMovie\\MvcMovie.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Валерий\\.nuget\\packages\\oracle.manageddataaccess.core\\2.19.100\\oracle.manageddataaccess.core.2.19.100.nupkg.sha512"
+  ],
   "logs": []
 }
