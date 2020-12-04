@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Routing;
 using System.Diagnostics;
+using MvcMovie.Models;
+using Microsoft.EntityFrameworkCore;
  
 namespace MvcMovie
 {
@@ -18,6 +20,8 @@ namespace MvcMovie
         {
             // services.AddControllers();
             services.AddControllersWithViews();
+            string connection = Configuration.GetConnectionString("ORACLE");
+            services.AddDbContext<MobileContext>(options => options.UseSqlServer(connection));            
         }
          
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// using Tutorial.SqlConn; 
 using System.Data.Common;
-// using oracle;
-// using Oracle.DataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
+
 
 public class DBOracleUtils {
     // string host, int port, string sid, string user, string password
-    public static OracleConnection GetDBConnection() {
-        string connString = "Data Source =                                (DESCRIPTION =                                  (ADDRESS_LIST =                                    (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1555))                                  )                                    (CONNECT_DATA =                                    (SERVICE_NAME = espc2test)                                    )                                ); Password=1111111; User ID=asutpweb";
+    public static OracleConnection  GetDBConnection() {
+        string connString = "Data Source =  (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.32.25)(PORT = 1521)) ) (CONNECT_DATA = (SERVICE_NAME = ORCLMIJOR) ));Password=1111111; User ID=asutpweb";
 
         OracleConnection conn = new OracleConnection();
         conn.ConnectionString = connString;
@@ -27,7 +26,7 @@ public class DBUtils {
 }
 
 public class QueryDataExample {
-    static void Main(string[] args) {
+    void Main(string[] args) {
         OracleConnection conn = DBUtils.GetDBConnection();
         conn.Open();
         try
